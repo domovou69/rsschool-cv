@@ -1,4 +1,4 @@
-<p> Mikhail Yesipchuk, 12 September 1992 </p>
+<p> Mikhail Yesipchuk </p>
 
 <p> Phone: +37062896281, E-mail: domovou69@gmail.com, social network: htps://vk.com/mikeyes, Linkedin: https://www.linkedin.com/in/mikhail-yesipchuk-091468104/ </p>
 
