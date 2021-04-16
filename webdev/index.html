@@ -11,37 +11,32 @@
 <body>
 
     <header>
-        <section>
-            <div class="header__inner">
-
-                <nav class="nav">
-                    <a class="nav__link active" href="#">About</a>
-                    <a class="nav__link" href="#">Syllabs</a>
-                </nav>
-
-                <div class="header__logo" src=>
-                    <a><img src="asserts/1_logo_Vector.png"></a>
-                </div>
-
-                <nav class="nav">
-                    <a class="nav__link" href="#">Projects</a>
-                    <a class="nav__link" href="#">FAQ</a>
-                </nav>
-            </div>
-        </section>
+        <div class="container">
+            <nav class="nav">
+                <ul>
+                    <li><a class="nav__link active" href="#">About</a></li>
+                    <li><a class="nav__link" href="#">Syllabs</a></li>
+                    <li class="logo"><a><img src="asserts/1_logo_Vector.png" href="index.html"></a></li>
+                    <li><a class="nav__link" href="#">Projects</a></li>
+                    <li><a class="nav__link" href="#">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section>
-            <div class="1st_screen">
 
-                <h1>YOUR LIFE IS WEBDEV</h1>
-                <h6>Whatever the approach to development may be, the final program must satisfy some fundamental
-                    properties
-                </h6>
+        <!-- First screen -->
+        <section class="first_screen">
 
-                <p><input type="button" value=" GET STARTED "></p>
+            <h1>YOUR LIFE IS WEBDEV</h1>
+            <p>Whatever the approach to development may be, the final program must satisfy some fundamental
+                properties
+            </p>
 
+            <input type="button" value=" GET STARTED ">
+
+            <div class="socials">
                 <ul>
                     <li><a href="mailto:domovou69@gmail.com"><img src="asserts/e-mail.jpg" alt=""></a></li>
                     <li><a href="https://www.facebook.com/yesmike/"><img src="image/facebook.jpg" alt=""></a></li>
@@ -49,125 +44,125 @@
                     </li>
                     <li><a href="https://www.youtube.com/"><img src="image/youtube.jpg" alt=""></a></li>
                 </ul>
-
             </div>
+
         </section>
 
-        <section>
-            <div class="2nd_screen">
+        <!-- Second screen -->
+        <section class="second_screen">
 
-                <div class="content-block">
-                    <h4>Represent your idea with <br> a smart Design</h4>
-                    <p>Tasks accompanying and related to programming include: testing, debugging, source code
-                        maintenance,
-                        implementation of build systems, and management of derived artifacts, such as the machine code
-                        of
-                        computer programs. </p>
-                    <p><input type="button" value=" GET STARTED "></p>
-                </div>
-
-                <a><img src="asserts/e-mail.jpg" alt=""></a>
-
+            <div class="content-block_second_screen">
+                <h2>Represent your idea with <br> a smart Design</h2>
+                <p>Tasks accompanying and related to programming include: testing, debugging, source code
+                    maintenance,
+                    implementation of build systems, and management of derived artifacts, such as the machine code
+                    of
+                    computer programs. </p>
+                <input type="button" value=" GET STARTED ">
             </div>
+
+            <div>
+                <a><img src="asserts/content-image-2.png" alt=""></a>
+            </div>
+
+
         </section>
 
-        <section>
+        <!-- Third screen -->
+        <section class="third_screen">
 
-            <div class="3-rd_screen">
-                <a><img src="asserts/pic3.jpg" alt=""></a>
+            <a><img src="asserts/pic3.jpg" alt=""></a>
 
-                <h4>OUR COMMUNITY</h4>
+            <h4>OUR COMMUNITY</h4>
 
-                <p>A hacker is any skilled computer expert that uses their technical knowledge to overcome a problem,
-                    but it can also mean a security hacker in common language</p>
-            </div>
+            <p>A hacker is any skilled computer expert that uses their technical knowledge to overcome a problem,
+                but it can also mean a security hacker in common language</p>
 
             <div class="slider-items"></div>
             <nav class="slider-nav"></nav>
 
         </section>
 
-        <section>
-            <div class="4th_screen">
+        <!-- Fourth screen -->
+        <section class="fourth_screen">
 
-                <a><img src="asserts/pic4.jpg" alt=""></a>
+            <a><img src="asserts/pic4.jpg" alt=""></a>
 
-                <div class="content-block">
-                    <h4>Implement right Code</h4>
-                    <p>These might be considered part of the programming process, but often the term software
-                        development is used for this larger process with the term programming, implementation </p>
-                    <p><input type="button" value=" GET STARTED "></p>
+            <div class="content-block">
+                <h4>Implement right Code</h4>
+                <p>These might be considered part of the programming process, but often the term software
+                    development is used for this larger process with the term programming, implementation </p>
+                <p><input type="button" value=" GET STARTED "></p>
+            </div>
+
+        </section>
+
+        <!-- Fiveth screen -->
+        <section class="fiveth_screen">
+
+
+            <div class="form">
+                <h4>sign up for our newsletter</h4>
+
+                <div class="input-bar">
+                    <div class="input-bar-item width100">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control width100">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="input-bar-item">
+                        <button class="btn btn-info">OK</button>
+                    </div>
                 </div>
+
             </div>
+
+
         </section>
 
-        <section>
-            <div class="5th_screen">
+        <!-- Sixth screen -->
+        <section class="sixth_screen">
 
-                <div class="form">
-                    <h4>sign up for our newsletter</h4>
+            <h4>DOWNLOAD THE APP</h4>
 
-                    <div class="input-bar">
-                        <div class="input-bar-item width100">
-                            <form>
-                                <div class="form-group">
-                                    <input class="form-control width100">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="input-bar-item">
-                            <button class="btn btn-info">OK</button>
-                        </div>
+            <p>Machine code was the language of early programs, written in the instruction set of the particular
+                machine, often in binary notation.</p>
+
+            <ul>
+                <div class="form-field">
+                    <div class="input-bar-item">
+                        <button class="btn btn-info">OK</button>
                     </div>
-
                 </div>
 
-            </div>
+                <div class="form-field">
+                    <div class="input-bar-item">
+                        <button class="btn btn-info">OK</button>
+                    </div>
+                </div>
+            </ul>
+
         </section>
 
-        <section>
-            <div class="6rd_screen">
-
-                <h4>DOWNLOAD THE APP</h4>
-
-                <p>Machine code was the language of early programs, written in the instruction set of the particular
-                    machine, often in binary notation.</p>
-
-                <ul>
-                    <div class="form-field">
-                        <div class="input-bar-item">
-                            <button class="btn btn-info">OK</button>
-                        </div>
-                    </div>
-
-                    <div class="form-field">
-                        <div class="input-bar-item">
-                            <button class="btn btn-info">OK</button>
-                        </div>
-                    </div>
-                </ul>
-
-            </div>
-        </section>
 
     </main>
 
     <footer>
-        <div class="footer__inner">
 
-            <nav class="nav__footer">
-                <a class="nav__link" href="#">Credits</a>
-                <a class="nav__link" href="#">Privacy</a>
-                <a class="nav__link" href="#">Our teams</a>
-            </nav>
+        <nav class="nav__footer">
+            <a class="nav__link" href="#">Credits</a>
+            <a class="nav__link" href="#">Privacy</a>
+            <a class="nav__link" href="#">Our teams</a>
+        </nav>
 
-            <div class="header__logo" src=>
-                <a><img src="asserts/1_logo_Vector.png"></a>
-            </div>
-
-            <h6>by Mikhail Yesipchuk for RSS at 2021</h6>
-
+        <div class="header__logo" src=>
+            <a><img src="asserts/1_logo_Vector.png"></a>
         </div>
+
+        <h6>by Mikhail Yesipchuk for RSS at 2021</h6>
+
     </footer>
 
 </body>
