@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /*Styles reset*/
 
 * {
@@ -29,6 +31,7 @@ header {
   height: 95px;
   margin-left: auto;
   margin-right: auto;
+  display:flex;
 }
 
 .container {
@@ -64,6 +67,60 @@ header {
   background-image: url("asserts/bg-image-wrapper.png");
   background-repeat: no-repeat, repeat;
   height: 744px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.first_screen h1 {
+  position: absolute;
+  width:735px;
+  height: 75px;
+  left: calc(50% - 730px/2);
+  top: calc(50% - 75px/2 - 104.5px);
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 75px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 4.5px;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+
+
+}
+
+.first_screen p {
+  position: absolute;
+width: 504px;
+height: 50px;
+left: calc(50% - 504px/2);
+top: calc(50% - 50px/2 - 22px);
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+
+text-align: center;
+
+color: #FFFFFF;
+}
+
+.first_screen button {
+  position: absolute;
+  left: calc(50% - 184px/2);
+  top: calc(50% - 46px/2 + 56px);
 }
 
 .nav {
@@ -128,70 +185,7 @@ nav ul li a {
   color: #fce38a;
 }
 
-h1 {
-  font-family: Roboto;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 75px;
-  letter-spacing: 4.5px;
-  text-align: center;
 
-  position: absolute;
-  width: 730px;
-  height: 75px;
-  left: calc(50% - 730px/2);
-  top: calc(50% - 75px/2 - 104.5px);
-  
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 64px;
-  line-height: 75px;
-  /* identical to box height */
-  
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 4.5px;
-  text-transform: uppercase;
-  
-  color: #FFFFFF;
-}
-
-.first_screen p {
-  position: absolute;
-  width: 504px;
-  height: 50px;
-  left: calc(50% - 504px/2);
-  top: calc(50% - 50px/2 - 22px);
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 140%;
-  /* or 25px */
-
-  text-align: center;
-
-  color: #FFFFFF;
-}
-
-.first_screen input {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 15px 47px;
-
-  position: absolute;
-  width: 184px;
-  height: 46px;
-  left: calc(50% - 184px/2);
-  top: calc(50% - 46px/2 + 56px);
-
-  background: #00AFDB;
-}
 
 .socials {
   position: absolute;
@@ -211,65 +205,75 @@ h1 {
   left: 0px;
   top: 744px;
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .content-block_second_screen {
-  position: absolute;
-  vertical-align: middle;
-  display: table-cell;
-  
+  width: 407px;
+  height: 582px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: center;
 }
 
 .content-block_second_screen h2 {
-  position: absolute;
-  width: 367px;
-  height: 57px;
-  left: 0px;
-  top: 0px;
-  
-  /* h2-24-bold */
-  
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
-  display: flex;
-  align-items: flex-end;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  
-  color: #373737;
+left: 0px;
+top: 0px;
+padding-bottom: 20px;
+width: 367px;
+/* h2-24-bold */
+
+font-family: Roboto;
+font-style: normal;
+font-weight:700;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: flex-end;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+color: #373737;
 }
 
-.second_screen a {
-  position: relative;
+.content-block_second_screen p {
+width: 407px;
+height: 80px;
+left: 0px;
+top: 77px;
+
+/* body-14-reg */
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 140%;
+/* or 20px */
+
+color: #4E4E4E;
+
+padding-bottom: 30px;
+}
+
+button[type="button"] {
+  display: flex;
+    /* padding: 15px 47px; */
+    width: 184px;
+    height: 46px;
+    background: #00AFDB;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.image-block_second_screen {
   width: 407px;
   height: 582px;
-  left: 924px;
-  top: 120px;
-}
-
-h2 {
-  position: absolute;
-  width: 367px;
-  height: 57px;
-  left: 0px;
-  top: 0px;
-
-  /* h2-24-bold */
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
-  display: flex;
-  align-items: flex-end;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-
-  color: #373737;
 }
 
 /* Thirds screen */
@@ -280,6 +284,7 @@ h2 {
   height: 504px;
   left: 0px;
   top: 1586px;
+  background: #F5F6F7;
 }
 
 
@@ -291,7 +296,83 @@ h2 {
   height: 842px;
   left: 0px;
   top: 2090px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #FFFFFF;
 }
+
+.image-block_fourth_screen {
+  width: 407px;
+  height: 582px;
+}
+
+.content-block_fourth_screen {
+  width: 407px;
+  height: 582px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: center;
+}
+
+.content-block_fourth_screen h2 {
+  
+  height: 28px;
+  left: 0px;
+  top: 0px;
+  
+  /* h2-24-bold */
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  
+  color: #373737;
+
+  padding-bottom: 20px;
+}
+
+.content-block_fourth_screen p {
+  width: 407px;
+  height: 60px;
+  left: 0px;
+  top: 48px;
+  
+  /* body-14-reg */
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  /* or 20px */
+  
+  color: #4E4E4E;
+
+  padding-bottom: 30px;
+}
+
+button[type="button"] {
+  display: flex;
+    /* padding: 15px 47px; */
+    width: 184px;
+    height: 46px;
+    background: #00AFDB;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 
 
 /* Fiveth screen */
@@ -312,6 +393,7 @@ h2 {
   height: 464px;
   left: 0px;
   top: 3456px;
+  display: flex;
 }
 
 footer {
