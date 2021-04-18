@@ -45,9 +45,9 @@ header {
 .first_screen_description {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
   align-items: center;
   align-content: center;
+  margin-bottom: 47px;
 }
 
 /* First Screen */
@@ -65,7 +65,7 @@ header {
 }
 
 .first_screen_description h1 {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 64px;
@@ -85,7 +85,7 @@ header {
 .first_screen_description p {
   width: 504px;
 
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -96,13 +96,13 @@ header {
   padding-bottom: 30px;
 }
 
-button[type="button"] {
- width: 184px;
+.button {
+  width: 184px;
   height: 46px;
-  background: #00AFDB;
+  background-color: #00AFDB;
   justify-content: center;
   align-items: center;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 16px;
@@ -114,6 +114,27 @@ button[type="button"] {
   color: #FFFFFF;
 }
 
+.btn {
+  background-color: #00AFDB;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.btn-mobile {
+  width: 127px;
+  height: 46px;
+}
+
 .nav {
   text-align: center;
   align-self: center;
@@ -123,9 +144,9 @@ button[type="button"] {
   padding: 0;
   display: flex;
   align-content: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 .nav ul li {
@@ -138,6 +159,12 @@ button[type="button"] {
 
 .nav ul li a {
   text-decoration: none;
+  height:20px;
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 140%;
 }
 
 .nav__link {
@@ -145,7 +172,7 @@ button[type="button"] {
   margin: 0 15px;
   position: relative;
 
-  color: rgb(255, 255, 255);
+  color: #FFFFFF;
   text-decoration: none;
 
   transition: color .1s linear;
@@ -180,11 +207,35 @@ button[type="button"] {
   color: #fce38a;
 }
 
-
 .socials {
   height: 20px;
   padding-bottom: 90px;
 }
+
+.nav_socials {
+  text-align: center;
+  align-self: center;
+}
+
+.nav_socials ul {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.nav_socials ul li {
+  margin-left: 15px;
+  margin-right: 15px;
+  list-style: none;
+  text-align: center;
+  border: 1.3px solid #ffffff;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
 
 /* Second screen */
 
@@ -217,7 +268,7 @@ padding-bottom: 20px;
 width: 367px;
 /* h2-24-bold */
 
-font-family: Roboto;
+font-family: Roboto, sans-serif;
 font-style: normal;
 font-weight:700;
 font-size: 24px;
@@ -237,7 +288,7 @@ left: 0px;
 top: 77px;
 
 /* body-14-reg */
-font-family: Roboto;
+font-family: Roboto, sans-serif;
 font-style: normal;
 font-weight: 500;
 font-size: 14px;
@@ -264,8 +315,52 @@ padding-bottom: 30px;
   left: 0px;
   top: 1586px;
   background: #F5F6F7;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
+.third_screen_user_card {
+  width: 298px;
+  height: 175px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.third_screen_user_card h3 {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+
+  color: #373737;
+}
+
+.third_screen_user_card p {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  /* or 20px */
+  
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  
+  color: #4E4E4E;
+}
 
 /* Fourth screen */
 
@@ -304,7 +399,7 @@ padding-bottom: 30px;
   
   /* h2-24-bold */
   
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -327,7 +422,7 @@ padding-bottom: 30px;
   
   /* body-14-reg */
   
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -342,18 +437,28 @@ padding-bottom: 30px;
 
 /* Fiveth screen */
 
+.form-control{
+  opacity: 1;
+  padding: 10px 15px;
+  float: left;
+  width: 310px;
+  height: 20px;
+}
+
+.btn-apply img {
+  padding: 13px 15px;
+  background-color: #00AFDB;
+  background-image: none;
+}
+
 .fiveth_screen {
   width: 100%;
   height: 524px;
-  left: 0px;
-  top: 2932px;
   background-image: url("asserts/pexels-christina-morillo-fiveth_page.png");
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  align-content: center;
 }
 
 .form_fiveth_screen {
@@ -369,7 +474,7 @@ padding-bottom: 30px;
   left: 13px;
   top: 0px;
 
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -404,6 +509,7 @@ padding-bottom: 30px;
   top: 0px;
   background: #FFFFFF;
   border-radius: 0px;
+  Float: left;
 }
 
 .btn-submit {
@@ -424,35 +530,13 @@ padding-bottom: 30px;
   background-repeat : no-repeat;
 }
 
-.form-control {
-  width: 39px;
-  height: 20px;
-  left: 24px;
-  top: 13px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 140%;
-  /* identical to box height, or 20px */
-
-  display: flex;
-  align-items: flex-end;
-
-  color: #373737;
-
-  opacity: 0.5;
-}
-
 
 /* Sixth_screen */
 
 .sixth_screen {
   width: 100%;
   height: 464px;
-  left: 0px;
-  top: 3456px;
+
   display: flex;
   background: #F5F6F7;
   flex-direction: column;
@@ -468,7 +552,7 @@ padding-bottom: 30px;
   left: 675px;
   top: 120px;
 
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -480,6 +564,7 @@ padding-bottom: 30px;
   text-transform: uppercase;
 
   color: #373737;
+  margin-bottom: 20px;
 }
 
 .sixth_screen p {
@@ -488,7 +573,7 @@ padding-bottom: 30px;
   left: 560px;
   top: 168px;
 
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -500,6 +585,8 @@ padding-bottom: 30px;
   text-align: center;
 
   color: #4E4E4E;
+
+  margin-bottom: 30px;
 }
 
 .sixth_screen_btn_apple {
@@ -512,6 +599,7 @@ padding-bottom: 30px;
   height: 46px;
   left: 599px;
   top: 238px;
+  margin-right:15px;
 }
 
 .input-bar-apple {
@@ -548,6 +636,14 @@ padding-bottom: 30px;
   order: 1;
   flex-grow: 0;
   margin: 0px 0px;
+  display: flex;
+  align-items: center
+}
+
+.img-center {
+  display: block;
+  margin-left: auto;
+    margin-right: auto
 }
 
 .sixth_screen_btn_android {
@@ -560,6 +656,7 @@ padding-bottom: 30px;
   height: 46px;
   left: 815px;
   top: 238px;
+  margin-left: 15px;
 }
 
 .input-bar-android {
@@ -596,7 +693,14 @@ padding-bottom: 30px;
   order: 1;
   flex-grow: 0;
   margin: 0px 0px;
+  display: flex;
+  align-items: center
 }
+
+.sixth_screen_buttons_box {
+  display: flex;
+}
+  
 
 /* Footer */
 
@@ -634,8 +738,6 @@ footer {
   text-decoration: none;
 }
 
-
-
 .copyrights {
   height: 20px;
   left: 1270px;
@@ -643,7 +745,7 @@ footer {
 }
 
 .copyrights span {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -658,4 +760,3 @@ footer {
 
 
 
-  
