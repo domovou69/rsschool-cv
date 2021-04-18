@@ -33,23 +33,21 @@ header {
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  justify-content: center;
 }
 
-.container {
-  z-index: 2;
-  width: fit-content;
-  padding: 0;
-  margin: 0;
+.header_container {
   height: 95px;
-  width: calc(100vw - 100px);
-
-}
-
-.logo {
   margin-left: auto;
   margin-right: auto;
-  display: block;
-  padding-top: 25px;
+}
+
+.first_screen_description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
 }
 
 /* First Screen */
@@ -66,14 +64,7 @@ header {
   justify-content: space-between;
 }
 
-
-.first_screen h1 {
-
-  width:735px;
-  height: 75px;
-  left: calc(50% - 730px/2);
-  top: calc(50% - 75px/2 - 104.5px);
-
+.first_screen_description h1 {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -88,45 +79,57 @@ header {
   text-transform: uppercase;
 
   color: #FFFFFF;
-
-
+  padding-bottom: 20px;
 }
 
-.first_screen p {
+.first_screen_description p {
+  width: 504px;
 
-width: 504px;
-height: 50px;
-left: calc(50% - 504px/2);
-top: calc(50% - 50px/2 - 22px);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 25px;
-
-text-align: center;
-
-color: #FFFFFF;
+  text-align: center;
+  color: #FFFFFF;
+  padding-bottom: 30px;
 }
 
+button[type="button"] {
+ width: 184px;
+  height: 46px;
+  background: #00AFDB;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
 
+  color: #FFFFFF;
+}
 
 .nav {
-  margin: 0 auto;
-  max-width: 800px;
-    width: 100vw;
-    margin-left: auto;
-    margin-right: auto
+  text-align: center;
+  align-self: center;
 }
 
 .nav ul {
   padding: 0;
   display: flex;
+  align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .nav ul li {
-  padding-top: 38px;
+  padding-top: 25px;
   padding-left: 40px;
   padding-right: 40px;
   list-style: none;
@@ -178,7 +181,6 @@ color: #FFFFFF;
 }
 
 
-
 .socials {
   height: 20px;
   padding-bottom: 90px;
@@ -188,7 +190,7 @@ color: #FFFFFF;
 
 .second_screen {
   background-color: #FFFFFF;
-  width: 1600px;
+  width: 100%;
   height: 842px;
   left: 0px;
   top: 744px;
@@ -247,16 +249,7 @@ color: #4E4E4E;
 padding-bottom: 30px;
 }
 
-button[type="button"] {
-  display: flex;
-    width: 184px;
-    height: 46px;
-    background: #00AFDB;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
+
 
 .image-block_second_screen {
   width: 407px;
@@ -266,7 +259,7 @@ button[type="button"] {
 /* Thirds screen */
 
 .third_screen {
-  width: 1600px;
+  width: 100%;
   height: 504px;
   left: 0px;
   top: 1586px;
@@ -277,7 +270,7 @@ button[type="button"] {
 /* Fourth screen */
 
 .fourth_screen {
-  width: 1600px;
+  width: 100%;
   height: 842px;
   left: 0px;
   top: 2090px;
@@ -347,13 +340,10 @@ button[type="button"] {
 }
 
 
-
-
-
 /* Fiveth screen */
 
 .fiveth_screen {
-  width: 1600px;
+  width: 100%;
   height: 524px;
   left: 0px;
   top: 2932px;
@@ -436,30 +426,30 @@ button[type="button"] {
 
 .form-control {
   width: 39px;
-height: 20px;
-left: 24px;
-top: 13px;
+  height: 20px;
+  left: 24px;
+  top: 13px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 140%;
-/* identical to box height, or 20px */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
 
-display: flex;
-align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 
-color: #373737;
+  color: #373737;
 
-opacity: 0.5;
+  opacity: 0.5;
 }
 
 
 /* Sixth_screen */
 
 .sixth_screen {
-  width: 1600px;
+  width: 100%;
   height: 464px;
   left: 0px;
   top: 3456px;
@@ -558,10 +548,7 @@ opacity: 0.5;
   order: 1;
   flex-grow: 0;
   margin: 0px 0px;
-
 }
-
-
 
 .sixth_screen_btn_android {
   display: flex;
@@ -614,7 +601,7 @@ opacity: 0.5;
 /* Footer */
 
 footer {
-  width: 1600px;
+  width: 100%;
   height: 185px;
   left: 0px;
   top: 3920px;
@@ -648,11 +635,6 @@ footer {
 }
 
 
-.logo {
-  width: 44px;
-  height: 44px;
-  padding-top: 60px;
-}
 
 .copyrights {
   height: 20px;
