@@ -15,19 +15,20 @@
 	}
 
 body {
-  position: relative;
   width: 1600px;
   height: 4105px;
   background: #FFFFFF;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 /* Header */
 
 header {
-  width: 1600px;
+  width: 100%;
   height: 95px;
   margin-left: auto;
   margin-right: auto;
@@ -54,23 +55,20 @@ header {
 /* First Screen */
 
 .first_screen {
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
   background-image: url("asserts/bg-image-wrapper.png");
   background-repeat: no-repeat, repeat;
   height: 744px;
   display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
-
 .first_screen h1 {
-  position: absolute;
+
   width:735px;
   height: 75px;
   left: calc(50% - 730px/2);
@@ -95,7 +93,7 @@ header {
 }
 
 .first_screen p {
-  position: absolute;
+
 width: 504px;
 height: 50px;
 left: calc(50% - 504px/2);
@@ -112,11 +110,7 @@ text-align: center;
 color: #FFFFFF;
 }
 
-.first_screen button {
-  position: absolute;
-  left: calc(50% - 184px/2);
-  top: calc(50% - 46px/2 + 56px);
-}
+
 
 .nav {
   margin: 0 auto;
@@ -163,7 +157,6 @@ color: #FFFFFF;
   background-color: #fce38a;
   opacity: 0;
 
-  position: absolute;
   top: 100%;
   left: 0;
   z-index: 1;
@@ -187,18 +180,14 @@ color: #FFFFFF;
 
 
 .socials {
-  position: absolute;
-  width: 170px;
   height: 20px;
-  left: calc(50% - 170px/2);
-  bottom: 90px;
+  padding-bottom: 90px;
 }
 
 /* Second screen */
 
 .second_screen {
   background-color: #FFFFFF;
-  position: absolute;
   width: 1600px;
   height: 842px;
   left: 0px;
@@ -260,7 +249,6 @@ padding-bottom: 30px;
 
 button[type="button"] {
   display: flex;
-    /* padding: 15px 47px; */
     width: 184px;
     height: 46px;
     background: #00AFDB;
@@ -278,7 +266,6 @@ button[type="button"] {
 /* Thirds screen */
 
 .third_screen {
-  position: absolute;
   width: 1600px;
   height: 504px;
   left: 0px;
@@ -290,7 +277,6 @@ button[type="button"] {
 /* Fourth screen */
 
 .fourth_screen {
-  position: absolute;
   width: 1600px;
   height: 842px;
   left: 0px;
@@ -360,24 +346,13 @@ button[type="button"] {
   padding-bottom: 30px;
 }
 
-button[type="button"] {
-  display: flex;
-    /* padding: 15px 47px; */
-    width: 184px;
-    height: 46px;
-    background: #00AFDB;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
+
 
 
 
 /* Fiveth screen */
 
 .fiveth_screen {
-  position: absolute;
   width: 1600px;
   height: 524px;
   left: 0px;
@@ -484,18 +459,21 @@ opacity: 0.5;
 /* Sixth_screen */
 
 .sixth_screen {
-  position: absolute;
   width: 1600px;
   height: 464px;
   left: 0px;
   top: 3456px;
   display: flex;
   background: #F5F6F7;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+
 }
 
-.sixth_screen h2 {
-  position: absolute;
- 
+.sixth_screen h2 { 
   height: 28px;
   left: 675px;
   top: 120px;
@@ -515,7 +493,6 @@ opacity: 0.5;
 }
 
 .sixth_screen p {
-  position: absolute;
   width: 480px;
   height: 40px;
   left: 560px;
@@ -541,7 +518,6 @@ opacity: 0.5;
   align-items: center;
   padding: 0px;
   
-  position: absolute;
   width: 186px;
   height: 46px;
   left: 599px;
@@ -593,7 +569,6 @@ opacity: 0.5;
   align-items: center;
   padding: 0px;
 
-  position: absolute;
   width: 186px;
   height: 46px;
   left: 815px;
@@ -639,7 +614,6 @@ opacity: 0.5;
 /* Footer */
 
 footer {
-  position: absolute;
   width: 1600px;
   height: 185px;
   left: 0px;
