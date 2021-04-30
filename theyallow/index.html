@@ -9,117 +9,149 @@
     <link rel="stylesheet" href="styles.css" />
 
 <body>
-    <div class="flex-container">
+    <div class="content-width">
+        <div class="flex-container">
 
-        <!-- Header -->
-        <header class="flex-item item-1">
+            <!-- Header -->
+            <header class="flex-item item-1">
 
-            <div class="banner">
-                <div class="logo">logo</div>
-                <div class="main_nav">
-                    <ul>
-                        <li class="main_navigation">
-                            <a href="#"><span>ABOUT US</span></a>
-                        </li>
-                        <li class="main_navigation">
-                            <a href="#"><span>SERVICES</span></a>
-                        </li>
-                        <li class="main_navigation">
-                            <a href="#"><span>CONTACT</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+                <!-- Header_top -->
+                <div class="banner">
+                    <div class="logo">
+                        <a href="#" class="logo_top_name"><img src="asserts/logo_top.png" alt="logo_top">THEYALOW</a>
 
-            <div class="header_bottom">
-
-                <div class="ctrl_left">left</div>
-
-                <div class="header_bottom_center">
-
-                    <div class="player">player</div>
-                    <div class="Title">
-                        <h1>THE COOL</h1>
-                        <h1>THE MINIMAL</h1>
                     </div>
-
-                </div>
-
-                <div class="ctrl_right">right</div>
-
-            </div>
-
-        </header>
-
-        <!-- Main content-->
-        <main>
-
-            <!-- Icons screen -->
-            <section class="flex-item  icon_area">
-
-                <div class="icons">
-                    <div class="icon_cloud">BETTER DESIGN</div>
-                    <div class="icon_leaf">CUSTOMISE</div>
-                    <div class="icon_telegram">ITS FREE</div>
-                </div>
-
-            </section>
-
-            <!-- Section-1 screen -->
-            <section class="flex-item  section_1">
-
-                <div class="section_1_title">LOREM IPSUM DOLOR SIR AMET</div>
-
-                <div>
-                    <div class="section_1_center_left_part">
-
-                        <div class="section_1_center_left_part_description">
-                            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut</h2>
-                        </div>
-
-                        <div class="section_1_center_left_part_movie">
-                            movie
-                        </div>
-                        <div class="section_1_center_left_part_date">
-                            <h3>25</h3>
-                            <p>APRIL</p>
-                        </div>
-                    </div>
-                    <div class="section_1_center_right_part"></div>
-                </div>
-
-                <div class="section_1_slider">slider</div>
-
-            </section>
-
-            <!-- Section-2 screen -->
-            <section class="flex-item  section_2">
-                <div class="section_2_title">Lorem ipsum dolor sit amet</div>
-                <div class="section_2_content">
-                    <div class="section_2_content_left"></div>
-                    <div class="section_2_content_right">
+                    <div class="main_nav">
                         <ul>
-                            <li>Sed ut perspiciatis unde omnis</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing </li>
-                            <li>Sed ut perspiciatis unde omnis copy</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing copy</li>
+                            <li class="main_navigation">
+                                <a href="#" class="button"><img class="nav_icon" src="asserts/aboutus.png"
+                                        alt="logo_top"><span>ABOUT US</span></a>
+                            </li>
+                            <li class="main_navigation">
+                                <a href="#" class="button"><img class="nav_icon" src="asserts/services.png"
+                                        alt="logo_top"><span>SERVICES</span></a>
+                            </li>
+                            <li class="main_navigation">
+                                <a href="#" class="button"><img class="nav_icon" src="asserts/contact.png"
+                                        alt="logo_top"><span>CONTACT</span></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
-            </section>
 
-        </main>
+                <!-- Header_bottom -->
+                <div class="header_bottom">
 
-        <!-- Footer screen -->
-        <footer class="flex-item ">
-            <div class="footer_logo">Footer logo</div>
-            <div class="footer_content">
-                <h4>THEYALLOW</h4>
-            </div>
-        </footer>
+                    <div class="ctrl_left">
+                        <button href="#" class="button ctrl"><img class="ctrl_nav_icon" src="asserts/ctrl_left.png"
+                                alt="logo_top"></button>
+                    </div>
+
+                    <div class="header_bottom_center">
+
+                        <div class="player">
+                            <iframe width="550" height="330" src="https://www.youtube.com/embed/iv4BLnU52R0"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="Title">
+                            <h1 class="h1_top">THE COOL</h1>
+                            <h1 class="h1_bottom">THE MINIMAL</h1>
+                        </div>
+
+                    </div>
+
+                    <div class="ctrl_right">
+                        <button href="#" class="button ctrl"><img class="ctrl_nav_icon" src="asserts/ctrl_right.png"
+                                alt="logo_top"></button>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- Main content-->
+            <main>
+
+                <!-- Icons screen -->
+                <section class="flex-item  icon_area">
+
+                    <div class="icons">
+                        <div class=" icon_flex">
+                            <a href="#" class="button2"><img class="nav_icon icon_cloud"
+                                    src="asserts/cloud_download.svg" alt="cloud_download"><span>BETTER DESIGN</span></a>
+                        </div>
+                        <div class="icon_flex">
+                            <a href="#" class="button2"><img class="nav_icon icon_leaf" src="asserts/leaf.svg"
+                                    alt="leaf"><span>CUSTOMISE</span></a>
+                        </div>
+                        <div class=" icon_flex">
+                            <a href="#" class="button2"><img class="nav_icon icon_telegram" src="asserts/telegram.svg"
+                                    alt="telegram"><span>ITS FREE</span></a>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- Section-1 screen -->
+                <section class="flex-item section_1">
+
+                    <div class="section_1_title">LOREM IPSUM DOLOR SIR AMET</div>
+
+                    <div>
+                        <div class="section_1_center_left_part">
+
+                            <div class="section_1_center_left_part_description">
+                                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut</h2>
+                            </div>
+
+                            <div class="section_1_center_left_part_movie">
+                                movie
+                            </div>
+                            <div class="section_1_center_left_part_date">
+                                <h3>25</h3>
+                                <p>APRIL</p>
+                            </div>
+                        </div>
+                        <div class="section_1_center_right_part"></div>
+                    </div>
+
+                    <div class="section_1_slider">slider</div>
+
+                </section>
+
+                <!-- Section-2 screen -->
+                <section class="flex-item  section_2">
+                    <div class="section_2_title">Lorem ipsum dolor sit amet</div>
+                    <div class="section_2_content">
+                        <div class="section_2_content_left"></div>
+                        <div class="section_2_content_right">
+                            <ul>
+                                <li>Sed ut perspiciatis unde omnis</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing </li>
+                                <li>Sed ut perspiciatis unde omnis copy</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing copy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <!-- Footer screen -->
+            <footer class="flex-item ">
+                <div class="footer_logo">Footer logo</div>
+                <div class="footer_content">
+                    <h4>THEYALLOW</h4>
+                </div>
+            </footer>
 
 
+
+        </div>
 
     </div>
 </body>
