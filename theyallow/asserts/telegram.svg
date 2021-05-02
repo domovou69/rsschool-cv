@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 83" width="81" height="83">
+	<title>icon_area</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #f5c506 } 
+	</style>
+	<g id="icon_area">
+		<path id="Shape 4" class="shp0" d="M59.23 50.81L59.23 74.95L48.69 61.28L26.83 83L0 0L81 29.18L59.23 50.81ZM7.59 7.88L53.66 56.34L59.06 50.97L7.59 7.88Z" />
+	</g>
+</svg>
