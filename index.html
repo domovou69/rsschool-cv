@@ -1,18 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="calculator.js"></script>
-    <title>Calculator_Esipchuk</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Esipchuk</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="calculator.js" defer></script>
 </head>
 
 <body>
+    <div class="calc-position">
+        <div class="calculator-body">
 
+            <section class="input-area-body">
+                <input id="input-equation" type="text" name="input" readonly class="input-area">
+            </section>
 
+            <section class="btns-area">
+                <button id=" data-equals" class="double-btn btn" onclick="insert('^')">Power</button>
+                <button id=" data-equals" class="double-btn btn" onclick="mathSqrt('√')">&#8730;</button>
+                <button id=" data-all-clear" class="double-btn btn" onclick="clearData()">AC</button>
+                <button id="data-delete" class="single-btn btn" onclick="deleteData()">&larr;</button>
+                <button id="data-operation-devide" class="single-btn btn" onclick="insert(' / ')">÷</button>
+                <button id="data-number" class="single-btn btn" onclick="insert('7')">7</button>
+                <button id="data-number" class="single-btn btn" onclick="insert('9')">8</button>
+                <button id="data-number" class="single-btn btn" onclick="insert('9')">9</button>
+                <button id="data-operation-multiply" class="single-btn btn" onclick="insert('*')">*</button>
+                <button id="data-number" class="single-btn btn" onclick="insert('4')">4</button>
+                <button id="data-number" class="single-btn btn" onclick="insert('5')">5</button>
+                <button id="data-number" class="single-btn btn" onclick="insert('6')">6</button>
+                <button id="data-operation-sum" class="single-btn btn" onclick="insert('+')">+</button>
+                <button id="data-number" class="single-btn btn" onclick="insert('1')">1</button>
+                <button id="data-number" class="single-btn btn" onclick="insert('2')">2</button>
+                <button id="data-number" class="single-btn btn" onclick="insert('3')">3</button>
+                <button id="data-operation-minus" class="single-btn btn" onclick="insert('-')">-</button>
+                <button id="data-number-dot" class="single-btn btn" onclick="insert('.')">.</button>
+                <button id="data-number" class="single-btn btn" onclick="insert('0')">0</button>
+                <button id=" data-equals" class="double-btn btn" onclick="equal()">=</button>
 
+            </section>
+
+        </div>
+    </div>
 </body>
 
 </html>
