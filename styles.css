@@ -1,19 +1,15 @@
-
-
-body {
+main {
   padding: 0;
   margin: 0;
   background: linear-gradient(to right, #00aaff, #00ff6c);
   user-select: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  align-items: center;
 }
 
-.calc-position {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    height: 100vh;
-    align-items: center;
-}
 
 .calculator-body {
     width: 350px;
