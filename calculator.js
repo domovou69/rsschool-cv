@@ -50,7 +50,6 @@ function calculateFunction() {
 }
 
 function calculate(firstOperand, secondOperand, operator) {
-
     switch (operator) {
         case "+":
             return firstOperand + secondOperand;
