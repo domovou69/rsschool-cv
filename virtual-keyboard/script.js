@@ -1,18 +1,24 @@
 
-
-let keyboardListEn = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace',
-    'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\', 'Delete',
-    'CapsLock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\'', 'Enter',
-    'ShiftLeft', '\\', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '↑', 'ShiftRight',
+let keyboardListRu = ['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace',
+    'Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'Delete',
+    'CapsLock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter',
+    'ShiftLeft', '\\', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.', '↑', 'ShiftRight',
     'ControlLeft', 'MetaLeft', 'AltLeft', 'Space', 'AltRight', 'ControlRight', '←', '↓', '→'];
+
 
 let unChangedBtns = ['ControlLeft', 'AltLeft', 'MetaLeft', 'ControlRight', 'AltRight', 'ShiftLeft', 'ShiftRight', 'Tab', 'CapsLock', 'Enter', 'Delete', 'Backspace', 'ArrowLeft', 'ArrowRight', 'ArrowDown', 'ArrowUp', ' '];
 let symbols = ['[', ']', '\\', ';', '\'', ',', '.', '/', '-', '=', '`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-let symbolsShift = ['{', '}', '|', ':', '"', '<', '>', '?', '_', '+', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
+let symbolsShift = ['{', '}', '|', ':', '"', '<', '>', '?', '_', '+', '~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '&amp;', "&gt;", '&lt;'];
 
 let caps = false;
 
 function init() {
+
+    let keyboardListEn = ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace',
+        'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\', 'Delete',
+        'CapsLock', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\'', 'Enter',
+        'ShiftLeft', '\\', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '↑', 'ShiftRight',
+        'ControlLeft', 'MetaLeft', 'AltLeft', 'Space', 'AltRight', 'ControlRight', '←', '↓', '→'];
 
     let display = '<input type="text" id = display_input ></input>';
     document.querySelector('#output').innerHTML = display;
@@ -115,11 +121,13 @@ init();
 
 // onKeyDown
 document.onkeydown = function (event) {
-    console.log('key_DOWN: ACTIVE BTN');
-    console.log(event);
+    //     console.log('key_DOWN: ACTIVE BTN');
+    //     console.log(event);
     if (unChangedBtns.includes(event.code) || unChangedBtns.includes(event.key)) {
         document.querySelector('#keyboard_buttons .keybord_btn[data="' + event.code + '"]').classList.add('active_button');
     }
+
+
 };
 
 // onPRESS
@@ -127,9 +135,10 @@ document.onkeypress = function (event) {
 
     if (event.code !== 'Backspace' && 'INPUT' !== document.activeElement.tagName) {
         document.querySelector('#keyboard_buttons .keybord_btn[data="' + event.key + '"]').classList.add('active_button');
-        console.log('key_PRESS: ' + event.key);
+        // console.log('key_PRESS: ' + event.key);
         display_input.value += event.key;
     }
+
     document.querySelector('#keyboard_buttons .keybord_btn[data="' + event.key + '"]').classList.add('active_button');
 
 };
@@ -183,6 +192,7 @@ document.querySelectorAll('#keyboard_buttons .keybord_btn').forEach(function (el
         let code = this.getAttribute('data');
         this.classList.add('active_button');
 
+
         display_input.value += code;
     }
 });
@@ -199,7 +209,7 @@ document.addEventListener('keydown', function (event) {
             caps = true;
             // Update lowerCase to upperCase
             document.querySelectorAll('#keyboard_buttons .keybord_btn').forEach(function (element) {
-                // Update only letters
+                // Update letters
                 if (!unChangedBtns.includes(element.getAttribute('data'))) {
                     element.innerHTML = element.innerHTML.toUpperCase();
                     element.setAttribute('data', element.innerHTML);
@@ -207,10 +217,8 @@ document.addEventListener('keydown', function (event) {
 
                 // Update symbols
                 if (symbols.includes(element.getAttribute('data'))) {
-
                     element.innerHTML = symbolsShift[symbols.indexOf(element.getAttribute('data'))];
                     element.setAttribute('data', element.innerHTML);
-
                 }
             })
 
@@ -248,8 +256,18 @@ document.addEventListener('keyup', function (event) {
                     element.innerHTML = element.innerHTML.toLowerCase();
                     element.setAttribute('data', element.innerHTML);
                 }
+
                 // Update symbols back to default
                 if (symbolsShift.includes(element.getAttribute('data'))) {
+
+                    if (element.innerHTML === "&amp;" || element.innerHTML === "&gt;" || element.innerHTML === '&lt;') {
+                        element.innerHTML === "&amp;" ? element.innerHTML = '7' : '?';
+                        element.innerHTML === "&lt;" ? element.innerHTML = '.' : '?';
+                        element.innerHTML === "&gt;" ? element.innerHTML = ',' : '?';
+                        element.setAttribute('data', element.innerHTML);
+                        return;
+                    }
+
                     element.innerHTML = symbols[symbolsShift.indexOf(element.getAttribute('data'))];
                     element.setAttribute('data', element.innerHTML);
                 }
