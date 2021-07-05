@@ -1,4 +1,3 @@
-
 let keyboardListRu = ['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace',
     'Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'Delete',
     'CapsLock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter',
@@ -116,7 +115,6 @@ function init() {
     keyboard_buttons.innerHTML = out;
 
 }
-
 init();
 
 
@@ -288,8 +286,7 @@ document.querySelectorAll('#keyboard_buttons .keybord_btn').forEach(function (el
     }
 });
 
-
-// SHIFT_start 
+// SHIFT
 document.addEventListener('keydown', function (event) {
     if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
         // console.log("EventListener_Shift");
@@ -313,24 +310,7 @@ document.addEventListener('keydown', function (event) {
 
             // Change Symbols
 
-        }
-
-        if (caps === false) {
-            caps = true;
-            // Update lowerCase to upperCase
-            document.querySelectorAll('#keyboard_buttons .keybord_btn').forEach(function (element) {
-                // Update only letters
-                if (!unChangedBtns.includes(element.getAttribute('data'))) {
-                    element.innerHTML = element.innerHTML.toUpperCase();
-                    element.setAttribute('data', element.innerHTML);
-                }
-
-            })
-
-
-        }
-
-        else {
+        } else {
             caps = false;
             // Update upperCase to lowerCase
             document.querySelectorAll('#keyboard_buttons .keybord_btn').forEach(function (element) {
@@ -355,7 +335,6 @@ document.addEventListener('keydown', function (event) {
                 }
             })
         }
-
     }
 });
 
@@ -407,8 +386,7 @@ document.addEventListener('keyup', function (event) {
     }
 });
 
-
-// Backspace_START
+// Backspace
 document.addEventListener('keydown', function (event) {
     if (event.code === 'Backspace') {
         display_input.value = display_input.value.slice(0, -1);
@@ -416,8 +394,8 @@ document.addEventListener('keydown', function (event) {
 });
 
 
-// It's a trap
 
+// It's a trap
 function runOnKeys(func, ...codes) {
     let pressed = new Set();
 
@@ -440,7 +418,6 @@ function runOnKeys(func, ...codes) {
     });
 
 }
-
 runOnKeys(
     () => alert(`    He-he, you find a BUG, only English language is implemented!
     +5 point to Gryffindor!!!`),
