@@ -236,11 +236,58 @@ document.querySelectorAll('#keyboard_buttons .keybord_btn').forEach(function (el
             }
 
         }
+
+        if (code === 'ShiftLeft' || code === 'ShiftRight') {
+            if (caps === false) {
+                caps = true;
+                // Update lowerCase to upperCase
+                document.querySelectorAll('#keyboard_buttons .keybord_btn').forEach(function (element) {
+                    // Update letters
+                    if (!unChangedBtns.includes(element.getAttribute('data'))) {
+                        element.innerHTML = element.innerHTML.toUpperCase();
+                        element.setAttribute('data', element.innerHTML);
+                    }
+
+                    // Update symbols
+                    if (symbols.includes(element.getAttribute('data'))) {
+                        element.innerHTML = symbolsShift[symbols.indexOf(element.getAttribute('data'))];
+                        element.setAttribute('data', element.innerHTML);
+                    }
+                })
+
+
+            }
+            else {
+                caps = false;
+                // Update upperCase to lowerCase
+                document.querySelectorAll('#keyboard_buttons .keybord_btn').forEach(function (element) {
+                    if (!unChangedBtns.includes(element.getAttribute('data'))) {
+                        element.innerHTML = element.innerHTML.toLowerCase();
+                        element.setAttribute('data', element.innerHTML);
+                    }
+
+                    // Update symbols back to default
+                    if (symbolsShift.includes(element.getAttribute('data'))) {
+
+                        if (element.innerHTML === "&amp;" || element.innerHTML === "&gt;" || element.innerHTML === '&lt;') {
+                            element.innerHTML === "&amp;" ? element.innerHTML = '7' : '?';
+                            element.innerHTML === "&lt;" ? element.innerHTML = '.' : '?';
+                            element.innerHTML === "&gt;" ? element.innerHTML = ',' : '?';
+                            element.setAttribute('data', element.innerHTML);
+                            return;
+                        }
+
+                        element.innerHTML = symbols[symbolsShift.indexOf(element.getAttribute('data'))];
+                        element.setAttribute('data', element.innerHTML);
+                    }
+                })
+            }
+
+
+        }
     }
 });
 
-// let symbols = ['[', ']', '\\', ';', '\'', ',', '.', '/', '-', '='];
-// let symbolsShift = ['{', '}', '|', ':', '"', '<', '>', '?', '_', '+'];
 
 // SHIFT_start 
 document.addEventListener('keydown', function (event) {
@@ -266,6 +313,47 @@ document.addEventListener('keydown', function (event) {
 
             // Change Symbols
 
+        }
+
+        if (caps === false) {
+            caps = true;
+            // Update lowerCase to upperCase
+            document.querySelectorAll('#keyboard_buttons .keybord_btn').forEach(function (element) {
+                // Update only letters
+                if (!unChangedBtns.includes(element.getAttribute('data'))) {
+                    element.innerHTML = element.innerHTML.toUpperCase();
+                    element.setAttribute('data', element.innerHTML);
+                }
+
+            })
+
+
+        }
+
+        else {
+            caps = false;
+            // Update upperCase to lowerCase
+            document.querySelectorAll('#keyboard_buttons .keybord_btn').forEach(function (element) {
+                if (!unChangedBtns.includes(element.getAttribute('data'))) {
+                    element.innerHTML = element.innerHTML.toLowerCase();
+                    element.setAttribute('data', element.innerHTML);
+                }
+
+                // Update symbols back to default
+                if (symbolsShift.includes(element.getAttribute('data'))) {
+
+                    if (element.innerHTML === "&amp;" || element.innerHTML === "&gt;" || element.innerHTML === '&lt;') {
+                        element.innerHTML === "&amp;" ? element.innerHTML = '7' : '?';
+                        element.innerHTML === "&lt;" ? element.innerHTML = '.' : '?';
+                        element.innerHTML === "&gt;" ? element.innerHTML = ',' : '?';
+                        element.setAttribute('data', element.innerHTML);
+                        return;
+                    }
+
+                    element.innerHTML = symbols[symbolsShift.indexOf(element.getAttribute('data'))];
+                    element.setAttribute('data', element.innerHTML);
+                }
+            })
         }
 
     }
