@@ -1,0 +1,131 @@
+#display_input{
+    width: 963px;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 20px 20px 20px 20px;
+    font-family: sans-serif;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+#keyboard_buttons {
+    display: block;
+    border: 2px solid black;
+    padding: 5px;
+    width: 995px;
+    height: 323px;
+}
+
+.keybord_btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    margin: 3px;
+    padding: 3px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    /* text-transform: uppercase; */
+    user-select: none; 
+    color: white;
+    background: gray;
+    font-weight: bold;
+    font-family:sans-serif;
+}
+
+.keybord_btn:hover {
+    color: #fff;;
+    background: rgb(104, 133, 161);
+    cursor: pointer;
+}
+
+.tilda {
+    background: #444444;
+    color: rgb(202, 202, 202);
+}
+
+.Backspace {
+    width: 130px;
+    background: #444444;
+    color: rgb(202, 202, 202);
+}
+
+.Tab {
+    width: 65px;
+    background: #444444;
+    color: rgb(202, 202, 202);
+}
+
+.CapsLock {
+    width: 130px;
+    background: #444444;
+    color: rgb(202, 202, 202);
+}
+
+.Enter {
+    width: 115px;
+    background: #444444;
+    color: rgb(202, 202, 202);
+}
+
+.ShiftLeft {
+    width: 90px;
+    background: #444444;
+    color: rgb(202, 202, 202);
+}
+
+.ShiftRight {
+    width: 90px;
+    background: #444444;
+    color: rgb(202, 202, 202);
+}
+
+.CtrlLeft {
+    width: 80px;
+    background: #444444;
+    color: rgb(202, 202, 202);
+}
+
+.CtrlRight {
+    width: 80px;
+    background: #444444;
+    color: rgb(202, 202, 202);
+}
+
+.space {
+    width: 392px;
+}
+
+.Delete {
+    background: #444444;
+    color: rgb(202, 202, 202);
+}
+
+.alt {
+    background: #444444;
+    color: rgb(202, 202, 202);
+}
+
+.Win {
+    background: #444444;
+    color: rgb(202, 202, 202);
+}
+
+.arrow {
+    background: #444444;
+    color: rgb(202, 202, 202);
+}
+
+
+
+.clearfix {
+    clear: both;
+}
+
+.active_button {
+    background: green;
+}
+
+.caps_active {
+    background: yellow;
+}
