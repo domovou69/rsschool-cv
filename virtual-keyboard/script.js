@@ -254,6 +254,7 @@ document.querySelectorAll('#keyboard_buttons .keybord_btn').forEach(function (el
                 })
 
 
+
             }
             else {
                 caps = false;

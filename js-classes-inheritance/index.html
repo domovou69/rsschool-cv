@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript-classes-inheritance</title>
+</head>
+
+<body>
+<p>Create a base class that will contain common methods. Then create 2 child classes (inherit from base): IntBuilder in ES6 style and StringBuilder in ES5 style. Almost all methods should be chainable for handy usage. You can add any own methods and properties to the classes BUT! methods described bellow must be in your solution</p>
+</body>
+
+<script>
+    // javascript-classes-inheritance
+    // ES6 class IntBuilder
+    class Base {
+        constructor(value) {
+            this.value = (value == undefined) ? 0 : value;
+        }
+    }
+
+    class IntBuilder extends Base {
+
+        plus(...args) {
+            const reducer = (sum, value) => sum + value
+            this.value = args.reduce(reducer, this.value)
+            return this
+        }
+
+        minus(...args) {
+            const reducer = (sum, value) => sum - value
+            this.value = args.reduce(reducer, this.value)
+            return this
+        }
+
+        multiply(arg) {
+            if (arg === undefined) {
+                return this
+            }
+            this.value = this.value * arg
+            return this
+        }
+
+        divide(arg) {
+            if ((arg === undefined) || (arg === 0)) {
+                return this
+            }
+            this.value = Math.trunc(this.value / arg)
+            return this
+        }
+
+        mod(arg) {
+            if ((arg === undefined) || (arg === 0)) {
+                return this
+            }
+            this.value = this.value % arg
+            return this
+        }
+
+        get() {
+            return this.value
+        }
+
+        static random(from, to) {
+            if ((from === undefined) || (n === undefined)) {
+                return this
+            }
+            return Math.floor(from + Math.random() * (to - from + 1))
+        }
+    }
+
+    let intBuilder = new IntBuilder(10); // 10;
+    intBuilder
+        .plus(2, 3, 2)                     // 17;
+        .minus(1, 2)                       // 14;
+        .multiply(2)                       // 28;
+        .divide(4)                         // 7;
+        .mod(3)                            // 1;
+        .get();                            // -> 1;
+
+
+    //ES5 class StringBuilder
+    function StringBuilder(arg = "") {
+        Object.assign(this, new Base(arg))
+    }
+
+    Object.setPrototypeOf(StringBuilder.prototype, Base.prototype);
+
+    StringBuilder.prototype.plus = function (arg) {
+        this.value = this.value + arg
+        return this
+    }
+
+    StringBuilder.prototype.minus = function (arg) {
+        this.value = this.value.slice(0, this.value.length - arg)
+        return this
+    }
+
+    StringBuilder.prototype.multiply = function (arg) {
+        let multiplyedString = ""
+        for (let i = 1; i < arg; i++) {
+            multiplyedString = multiplyedString + this.value
+        }
+        this.value = this.value + multiplyedString
+        return this
+    }
+
+    StringBuilder.prototype.divide = function (arg) {
+        if ((arg === undefined) || (arg === 0)) {
+            return this
+        }
+        let k = Math.floor(this.value.length / arg)
+        this.value = this.value.slice(0, k)
+        return this
+    }
+
+    StringBuilder.prototype.remove = function (arg) {
+        let index = this.value.indexOf(arg)
+        while (index != -1) {
+            this.value = this.value.slice(0, index) + this.value.slice(index + 1, this.value.length)
+            index = this.value.indexOf(arg)
+        }
+        return this
+    }
+
+    StringBuilder.prototype.sub = function (from, n) {
+        if ((from === undefined) || (n === undefined)) {
+            return this
+        }
+        this.value = this.value.slice(from, from + n)
+        return this
+    }
+
+    StringBuilder.prototype.get = function () {
+        return this.value
+    }
+
+    let stringBuilder = new StringBuilder('Hello');
+
+    stringBuilder
+        .plus(' all', '!')                         // 'Hello all!'
+        .minus(4)                                  // 'Hello '
+        .multiply(3)                               // 'Hello Hello Hello '
+        .divide(4)                                 // 'Hell';
+        .remove('l')                               // 'He';
+        .sub(1, 1)                                  // 'e';
+        .get();                                    // -> 'e';
+
+</script>
+
+</html>
